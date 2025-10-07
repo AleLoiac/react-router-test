@@ -4,6 +4,9 @@ import "./index.css";
 import App from "./App.jsx";
 import { createBrowserRouter, RouterProvider } from "react-router";
 import Profile from "./Profile.jsx";
+import Shiba from "./Shiba.jsx";
+import Husky from "./Husky.jsx";
+import DefaultProfile from "./DefaultProfile.jsx";
 
 const router = createBrowserRouter([
   {
@@ -13,6 +16,11 @@ const router = createBrowserRouter([
   {
     path: "profile",
     element: <Profile />,
+    children: [
+      { index: true, element: <DefaultProfile /> },
+      { path: "shiba", element: <Shiba /> },
+      { path: "husky", element: <Husky /> },
+    ],
   },
 ]);
 

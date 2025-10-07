@@ -1,3 +1,4 @@
+import { Link } from "react-router";
 import "./App.css";
 
 function App() {
@@ -8,7 +9,7 @@ function App() {
       <nav>
         <ul>
           <li>
-            <a href="profile">Profile page</a>
+            <Link to="profile">Profile page</Link>
           </li>
         </ul>
       </nav>
